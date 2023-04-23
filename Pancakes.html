@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chocolate Banana Pancakes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F0E68C;
+            color: #333;
+            margin: 0;
+            padding: 0;
+          }
+          
+          
+          h1, h2 {
+            text-align: center;
+            margin-top: 1em;
+          }
+          
+          h1 {
+            font-size: 3em;
+            color: #8B0000;
+          }
+          
+          h2 {
+            font-size: 2em;
+            color: #333;
+            border-bottom: 2px solid #8B0000;
+            padding-bottom: 0.5em;
+          }
+          
+          
+          p {
+            margin: 0.5em 0;
+          }
+          
+          
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+          
+          
+          li {
+            margin-bottom: 0.5em;
+          }
+          
+          
+          ol {
+            counter-reset: steps;
+            padding-left: 0;
+          }
+          
+          
+          ol li {
+            counter-increment: steps;
+            margin-bottom: 0.5em;
+          }
+          
+          ol li:before {
+            content: counter(steps) ". ";
+          }
+          
+          
+          a {
+            color: #8B0000;
+            text-decoration: none;
+          }
+          
+          a:hover {
+            text-decoration: underline;
+          }
+          
+          
+          h2 + p {
+            text-align: center;
+            margin-top: 2em;
+            font-style: italic;
+            color: #666;
+          }
+          </style>
+</head>
+<body>
+  <header>
+<p>Measurement Converter</p>
+<label for="gms-input">Amount in gms:</label>
+<input type="number" id="gms-input">
+
+<label for="ounces-output">Converted amount in ounces:</label>
+<input type="number" id="ounces-output" disabled>
+
+<button onclick="convert()">Convert</button>
+
+<script>
+
+    function convertGmsToOunces(gms) {
+        const ouncesPerGms = 0.035274;
+        return gms * ouncesPerGms;
+    
+    }
+
+
+    function convert() {
+        const gms = document.getElementById("gms-input").value;
+        const ounces = convertGmsToOunces(gms);
+        document.getElementById("ounces-output").value = ounces;
+    }
+    
+    
+
+</script>
+  </header>
+	<h1>Chocolate Banana Pancakes</h1>
+	<p>Prep Time: 10 Minutes</p>
+	<p>Serves: 3</p>
+
+	<h2>Ingredients</h2>
+	<ul>
+		<li>100gms plain flour</li>
+		<li>1 large egg</li>
+		<li>1/2 pint of milk</li>
+        <li>Pinch of salt</li>
+		<li>Knobb of butter for frying</li>
+		<li>50gms cadbury's milk chocolate</li>
+		<li>50gms dark chocolate</li>
+        <li>Knobb of butter</li>
+        <li>2-3 tbsps milk</li>
+        <li>3 bananas sliced</li>
+	</ul>
+
+	<h2>Method</h2>
+	<ol>
+		<li>Make the chocolate sauce.</li>
+        <li>Break the chocolate into a heat-proof bowl.</li> 
+        <li>Add a knob of butter and 3 tbsps of milk.</li>
+        <li>Melt for 30 seconds in the microwave.</li> 
+        <li>Remove and stir well until smooth and glossy with no lumps.</li> 
+        <li>To make the pancakes, sieve the flour and salt into a bowl.</li> 
+        <li>Break in the egg and pour in half a pint of milk. </li>
+        <li>Using a balloon whisk, beat the milk, egg and flour until you have a smooth batter. </li>
+        <li>Heat a knob of butter in a frying pan/crepe pan. </li>
+        <li>Turn the heat up high and pour in two ladles of batter to make one pancake. </li>
+        <li>Cook for a few minutes until browned slightly on one side then flip over to cook the other side. </li>
+        <li>Serve with sliced banana and chocolate sauce poured over the pancake.</li>
+        
+	</ol>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#pimp-button").click(function(){
+    $("#myText").slideToggle(500);
+  });
+});
+</script>
+
+<style>
+#myText {
+  display: none;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+</style>
+
+<h2 id="pimp-button">Pimp it! (click on me)</h2>
+<p id="myText">You can use tinned pears instead of bananas, or maple syrup instead of chocolate sauce.</p>
+</body>
+</html>

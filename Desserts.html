@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Desserts</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #F9F9F9;
+      }
+      
+      body.dark-theme {
+      background-color: #333;
+      color: #f0f0f0;
+      }
+
+      h1 {
+        background-color: #FFC947;
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+        color: #FFFFFF;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      li {
+        padding: 10px;
+        border: 1px solid #ddd;
+        margin: 10px;
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 300px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #555;
+        transition: all 0.3s ease;
+      }
+
+      a:hover {
+        color: #FFC947;
+      }
+
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+
+      a > h2 {
+        margin: 0;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <button id="toggle-theme" style="position: absolute; top: 0; right: 0;">Toggle Theme</button>
+      <h1>Desserts</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+      <script src="MyRecipes.js"></script>
+    </header>
+    <ul>
+      <li>
+        <a href="Pancakes.html">
+          <img src="https://www.natalieshealth.com/wp-content/uploads/2022/05/Chocolate-Banana-Pancakes-featured-image.jpeg">
+          <h2>Chocolate Banana Pancakes</h2>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="https://therecipecritic.com/wp-content/uploads/2021/06/brownies2.jpg">
+          <h2>Chocolate Brownies</h2>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="https://www.culinaryhill.com/wp-content/uploads/2021/01/Tiramisu-Culinary-Hill-1200x800-1.jpg">
+          <h2>Tiramisú</h2>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main Dishes</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #F9F9F9;
+      }
+
+      body.dark-theme {
+      background-color: #333; 
+      color: #f0f0f0; 
+      }
+
+      h1 {
+        background-color: #FFC947;
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+        color: #FFFFFF;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      li {
+        padding: 10px;
+        border: 1px solid #ddd;
+        margin: 10px;
+        background-color: #FFFFFF;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 300px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #555;
+        transition: all 0.3s ease;
+      }
+
+      a:hover {
+        color: #FFC947;
+      }
+
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <button id="toggle-theme" style="position: absolute; top: 0; right: 0;">Toggle Theme</button>
+      <h1>Main Dishes</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </nav>
+      <script src="MyRecipes.js"></script>
+    </header>
+    <ul>
+      <li>
+        <a href="SugoalPomodoro.html">
+          <img src="https://static01.nyt.com/images/2022/08/21/dining/21EAT-EK-pasta-al-pomodoro/merlin_211545387_5042dbc4-2fa7-4ec9-b10e-b39ccd0ed5fa-threeByTwoMediumAt2X.jpg" alt="Sugo al Pomodoro">
+          <h2>Sugo al Pomodoro</h2>
+        </a>
+      </li>
+      <li>
+        <a href="SugoalTonno.html">
+          <img src="https://images.food52.com/xxRsvk8Vc4mx2c1svU0PuvwR4Uo=/1200x900/904d9043-ad12-4d58-b198-697b1bdc165a--cucinadimammina_spaghetti_con_tonno_1.jpg" alt="Sugo al Tonno">
+          <h2>Sugo al Tonno</h2>
+        </a>
+      </li>
+      <li>
+        <a href="Risotto.html">
+          <img src="https://www.mysocialrecipe.com/files/admin/immagini/risottocongamberirossiezestedilimoneconmelanzanaaffumicataallamentucciafabiomancuso-master.jpg" alt="Risotto con Gamberi e Scamorza">
+          <h2>Risotto con Gamberi e Scamorza</h2>
+        </a>
+      </li>
+      <li>
+        <a href="BeefStroganoff.html">
+          <img src="https://img.taste.com.au/vpSiY1Vm/taste/2016/11/beef-stroganoff-with-rice-22283-1.jpeg" alt="Beef Stroganoff with Rice">
+          <h2>Beef Stroganoff with Rice</h2>
+        </a>
+      </li>
+      <li>
+        <a href="ChieckStirFry.html">
+          <img src="https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2021/05/Chicken-Stir-Fry-main-1.jpg" alt="Chicken Stir Fry">
+          <h2>Chicken Stir Fry</h2>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>

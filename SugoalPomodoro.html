@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sugo al Pomodoro</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #F0E68C;
+          color: #333;
+          margin: 0;
+          padding: 0;
+        }
+        
+        h1, h2 {
+          text-align: center;
+          margin-top: 1em;
+        }
+        
+        h1 {
+          font-size: 3em;
+          color: #8B0000;
+        }
+        
+        h2 {
+          font-size: 2em;
+          color: #333;
+          border-bottom: 2px solid #8B0000;
+          padding-bottom: 0.5em;
+        }
+        
+        p {
+          margin: 0.5em 0;
+        }
+        
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+    
+        li {
+          margin-bottom: 0.5em;
+        }
+        
+        ol {
+          counter-reset: steps;
+          padding-left: 0;
+        }
+        
+        ol li {
+          counter-increment: steps;
+          margin-bottom: 0.5em;
+        }
+        
+        ol li:before {
+          content: counter(steps) ". ";
+        }
+        
+        a {
+          color: #8B0000;
+          text-decoration: none;
+        }
+        
+        a:hover {
+          text-decoration: underline;
+        }
+        
+        h2 + p {
+          text-align: center;
+          margin-top: 2em;
+          font-style: italic;
+          color: #666;
+        }
+        </style>
+</head>
+<body>
+  <header>
+    <p>Measurement Converter</p>
+    <label for="gms-input">Amount in gms:</label>
+    <input type="number" id="gms-input">
+    
+    <label for="ounces-output">Converted amount in ounces:</label>
+    <input type="number" id="ounces-output" disabled>
+    
+    <button onclick="convert()">Convert</button>
+    
+    <script>
+    
+        function convertGmsToOunces(gms) {
+            const ouncesPerGms = 0.035274;
+            return gms * ouncesPerGms;
+        
+        }
+    
+    
+        function convert() {
+            const gms = document.getElementById("gms-input").value;
+            const ounces = convertGmsToOunces(gms);
+            document.getElementById("ounces-output").value = ounces;
+        }
+    
+    </script>
+    </header>
+	<h1>Sugo al Pomodoro</h1>
+	<p>Prep Time: 20 Minutes</p>
+	<p>Serves: 4</p>
+
+	<h2>Ingredients</h2>
+	<ul>
+		<li>1x 450gms tin of chopped tomatoes</li>
+		<li>2 tbsp chopped frozen onions</li>
+		<li>1 Knorr stockpot (chicken or vegetable)</li>
+		<li>2 tbsps olive oil</li>
+		<li>5/6 basil leaves</li>
+		<li>Salt and black pepper</li>
+	</ul>
+
+	<h2>Method</h2>
+	<ol>
+		<li>Heat the olive oil in a heavy-bottomed saucepan.</li>
+		<li>Add the onion and fry gently for about 2-3 minutes.</li>
+		<li>Add the tinned tomatoes, stock pot and torn basil.</li>
+		<li>Add a couple of pinches of salt and several grinds of black pepper.</li>
+		<li>Bring to the boil then cover with lid and simmer on a low heat for 15-20 minutes, stirring occasionally.</li>
+	</ol>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#pimp-button").click(function(){
+    $("#myText").slideToggle(500);
+  });
+});
+</script>
+
+<style>
+#myText {
+  display: none;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+</style>
+
+<h2 id="pimp-button">Pimp it! (click on me)</h2>
+<p id="myText">Use three long sprigs of rosemary instead of basil and stir in a couple of tbsps of ricotta once the sauce is ready.</p>
+</body>
+</html>
